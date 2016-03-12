@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">sesion08Entregable</string>
+    <string name="jugador1">Jugador 1</string>
+    <string name="jugador2">Jugador 2</string>
+    <string name="normal">Normal</string>
+    <string name="commander">EDH</string>
+    <string name="gigante">Gigante</string>
+    <string name="tituloapp">Magic Life Counter</string>
+    <string name="pregunta">¿Qué formato vas a jugar?</string>
+    <string name="guardadas">Últimas partidas jugadas</string>
+    <string name="sinpartidasguardadas">No se encontraron partidas anteriores</string>
+    <string name="partidasguardadas">Last Saved Matches</string>
+</resources>
