@@ -26,10 +26,12 @@
         <activity
             android:name=".DataSavesActivity"
             android:label="@string/partidasguardadas"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".GigantActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/gigante"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GigantActivity"
+            android:label="@string/gigante"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".PlayActivity"></activity>
     </application>
 
 </manifest>

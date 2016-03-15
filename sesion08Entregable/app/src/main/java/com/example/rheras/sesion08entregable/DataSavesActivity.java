@@ -47,7 +47,7 @@ public class DataSavesActivity extends AppCompatActivity {
     public void loadMatches(){
 
         matchModels = new ArrayList<>();
-
+        matchModel = new MatchModel();
 
 
         auxint=0;
@@ -71,7 +71,7 @@ public class DataSavesActivity extends AppCompatActivity {
 
                 if (auxint % 3 == 0) {
 
-                    matchModel = new MatchModel();
+
 
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     matchModel.setMyDate(dateFormat.parse(aux));

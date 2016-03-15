@@ -46,8 +46,8 @@ public class NormalActivity extends AppCompatActivity {
 
         Bundle aux = getIntent().getExtras();
 
-        pj1 = aux.getString(MainActivity.EXTRA_MESSAGE);
-        pj2 = aux.getString(MainActivity.EXTRA_MESSAGE2);
+        pj1 = aux.getString(PlayActivity.EXTRA_MESSAGE);
+        pj2 = aux.getString(PlayActivity.EXTRA_MESSAGE2);
         pjname1 = (TextView) findViewById(R.id.normal1name);
         pjname2 = (TextView) findViewById(R.id.normal2name);
         normallifes1 = (TextView) findViewById(R.id.normalplayer1lifes);

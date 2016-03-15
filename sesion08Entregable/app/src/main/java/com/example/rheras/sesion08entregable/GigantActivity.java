@@ -34,8 +34,8 @@ public class GigantActivity extends AppCompatActivity {
 
         Bundle aux = getIntent().getExtras();
 
-        pj1 = aux.getString(MainActivity.EXTRA_MESSAGE);
-        pj2 = aux.getString(MainActivity.EXTRA_MESSAGE2);
+        pj1 = aux.getString(PlayActivity.EXTRA_MESSAGE);
+        pj2 = aux.getString(PlayActivity.EXTRA_MESSAGE2);
         pjname1 = (TextView) findViewById(R.id.gigant1name);
         pjname2 = (TextView) findViewById(R.id.gigant2name);
         gigantlifes1 = (TextView) findViewById(R.id.gigantplayer1lifes);
