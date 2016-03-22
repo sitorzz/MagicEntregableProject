@@ -10,4 +10,7 @@
     <string name="guardadas">Últimas partidas jugadas</string>
     <string name="sinpartidasguardadas">No se encontraron partidas anteriores</string>
     <string name="partidasguardadas">Last Saved Matches</string>
+    <string name="codigo">Codigo jugador</string>
+    <string name="nombre">Nombre jugador</string>
+    <string name="register">Registra los jugadores!</string>
 </resources>
