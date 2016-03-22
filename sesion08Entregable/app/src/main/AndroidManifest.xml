@@ -31,7 +31,9 @@
             android:name=".GigantActivity"
             android:label="@string/gigante"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".PlayActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DataSavesDetailActivity"></activity>
     </application>
 
 </manifest>

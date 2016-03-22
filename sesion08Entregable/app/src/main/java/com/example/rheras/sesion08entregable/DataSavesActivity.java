@@ -1,24 +1,32 @@
 package com.example.rheras.sesion08entregable;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-public class DataSavesActivity extends AppCompatActivity {
+public class DataSavesActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
-    private TextView lastmatches;
-
+    private ListView lastmatches;
     private MatchModel matchModel;
     private int auxint;
     private ArrayList<Integer> lifes;
     private PlayerModel playerModel;
     private ArrayList<PlayerModel> jugadores;
     private ArrayList<MatchModel> matchModels;
+    private ArrayList<Map<String, String>> data;
+    public final static String EXTRA_MESSAGE_DETAIL = "detaildata";
 
 
     @Override
@@ -27,30 +35,28 @@ public class DataSavesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_saves);
 
 
+        lastmatches = (ListView) findViewById(R.id.datasaves);
 
-        lastmatches = (TextView) findViewById(R.id.datasaves);
-
-        String matches="";
 
         loadMatches();
+        createDataModel();
+        SimpleAdapter adapter;
 
-        for(int i=0;i<matchModels.size();i++){
+        adapter = new SimpleAdapter(this, data, android.R.layout.simple_list_item_2,new String[]{"title","subtitle"},new int[]{android.R.id.text1,android.R.id.text2});
 
-            matches=matches+"\r\n"+"\r\n"+"Partida "+i+" "+matchModels.get(i).toString();
-        }
+        lastmatches.setAdapter(adapter);
+        lastmatches.setOnItemClickListener(this);
 
-        lastmatches.setText(matches);
 
 
     }
 
-    public void loadMatches(){
+    public void loadMatches() {
 
         matchModels = new ArrayList<>();
 
 
-
-        auxint=0;
+        auxint = 0;
 
         try {
 
@@ -108,7 +114,7 @@ public class DataSavesActivity extends AppCompatActivity {
                                 lifes.add(Integer.parseInt(param[j]));
                             }
                         }
-                        
+
                         jugadores.add(playerModel);
 
 
@@ -122,11 +128,7 @@ public class DataSavesActivity extends AppCompatActivity {
             }
 
 
-
-
-
             fin.close();
-
 
 
         } catch (Exception ex) {
@@ -134,5 +136,29 @@ public class DataSavesActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void createDataModel() {
+
+        data = new ArrayList<Map<String, String>>();
+
+        for (int i = 0; i < matchModels.size(); i++) {
+        Map<String,String> datum = new HashMap<String,String>(2);
+
+            datum.put("title",matchModels.get(i).getPlayers().get(0).getName()+" VS "+matchModels.get(i).getPlayers().get(1).getName());
+            datum.put("subtitle",matchModels.get(i).getMyDate().toString());
+
+        data.add(datum);
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        Intent intenttodetail = new Intent(this, DataSavesDetailActivity.class);
+
+        intenttodetail.putExtra(EXTRA_MESSAGE_DETAIL,matchModels.get(position));
+
+        startActivity(intenttodetail);
     }
 }
