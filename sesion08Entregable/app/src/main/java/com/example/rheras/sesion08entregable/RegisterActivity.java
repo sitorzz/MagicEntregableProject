@@ -26,12 +26,13 @@ public class RegisterActivity extends AppCompatActivity {
         db = playerSQLiteHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        EditText editTextCodigo = (EditText) findViewById(R.id.editTextCodigo);
-        EditText editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+        EditText editTextName = (EditText) findViewById(R.id.editTextName);
+        EditText editTextImage = (EditText) findViewById(R.id.editTextImage);
+        EditText editTextLife = (EditText) findViewById(R.id.editTextlife);
 
-        values.put("name", editTextCodigo.getText().toString());
-        values.put("image", editTextNombre.getText().toString());
-        values.put("life",editTextNombre)
+        values.put("name", editTextName.getText().toString());
+        values.put("image", editTextImage.getText().toString());
+       values.put("life",editTextLife.getText().toString());
 
 
         db.insert("Alumnos", null, values);
