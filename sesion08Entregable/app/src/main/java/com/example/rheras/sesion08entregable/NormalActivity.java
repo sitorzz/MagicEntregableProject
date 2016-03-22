@@ -1,11 +1,14 @@
 package com.example.rheras.sesion08entregable;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +40,7 @@ public class NormalActivity extends AppCompatActivity {
     private int lifes1;
     private int lifes2;
     private SimpleDateFormat format;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,6 +225,8 @@ public class NormalActivity extends AppCompatActivity {
         finish();
 
     }
+
+
 
 
 
