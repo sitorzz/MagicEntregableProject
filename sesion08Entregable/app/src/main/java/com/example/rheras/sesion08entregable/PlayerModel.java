@@ -1,9 +1,9 @@
 package com.example.rheras.sesion08entregable;
 
 
+import java.io.Serializable;
 
-
-public class PlayerModel {
+public class PlayerModel implements Serializable {
 
     private String name;
     private String avatar;

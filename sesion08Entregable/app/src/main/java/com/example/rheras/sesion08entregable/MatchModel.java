@@ -1,12 +1,13 @@
 package com.example.rheras.sesion08entregable;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 
 
 
-public class MatchModel {
+public class MatchModel implements Serializable {
 
     private Date myDate;
     private String modo;
@@ -50,6 +51,7 @@ public class MatchModel {
     }
 
     public ArrayList<PlayerModel> getPlayers() {
+
         return players;
     }
 

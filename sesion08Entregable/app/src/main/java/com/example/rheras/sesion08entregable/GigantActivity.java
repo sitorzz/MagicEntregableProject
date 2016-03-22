@@ -148,7 +148,7 @@ public class GigantActivity extends AppCompatActivity {
 
 
         pjname1 = (TextView) findViewById(R.id.gigant1name);
-        pjname2 = (TextView) findViewById(R.id.gigant1name);
+        pjname2 = (TextView) findViewById(R.id.gigant2name);
 
 
         File file = new File(getFilesDir()+"/registronormal.txt");
