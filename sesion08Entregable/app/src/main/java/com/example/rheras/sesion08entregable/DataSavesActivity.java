@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -141,12 +142,14 @@ public class DataSavesActivity extends AppCompatActivity implements AdapterView.
     private void createDataModel() {
 
         data = new ArrayList<Map<String, String>>();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         for (int i = 0; i < matchModels.size(); i++) {
         Map<String,String> datum = new HashMap<String,String>(2);
 
             datum.put("title",matchModels.get(i).getPlayers().get(0).getName()+" VS "+matchModels.get(i).getPlayers().get(1).getName());
-            datum.put("subtitle",matchModels.get(i).getMyDate().toString());
+
+            datum.put("subtitle",dateFormat.format(matchModels.get(i).getMyDate()));
 
         data.add(datum);
         }

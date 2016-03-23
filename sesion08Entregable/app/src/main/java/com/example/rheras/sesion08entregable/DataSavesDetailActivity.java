@@ -5,11 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+
 public class DataSavesDetailActivity extends AppCompatActivity {
     private MatchModel matchModel;
     private String prueba;
     private TextView namesView;
-    TextView resultsView;
+    private TextView result1View;
+    private TextView result2View;
+    private TextView matchof;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +24,9 @@ public class DataSavesDetailActivity extends AppCompatActivity {
         matchModel = (MatchModel) intent.getExtras().getSerializable(DataSavesActivity.EXTRA_MESSAGE_DETAIL);
 
         namesView = (TextView) findViewById(R.id.names);
-        resultsView = (TextView) findViewById(R.id.results);
+        result1View = (TextView) findViewById(R.id.result1);
+        result2View = (TextView) findViewById(R.id.result2);
+        matchof = (TextView) findViewById(R.id.matchof);
 
         showResults();
 
@@ -29,11 +35,22 @@ public class DataSavesDetailActivity extends AppCompatActivity {
 
     public void showResults (){
 
-
-        namesView.setText("Partida de "+matchModel.getPlayers().get(0).getName()+" VS "+matchModel.getPlayers().get(1).getName());
-        resultsView.setText("Resultados "+matchModel.getResultados().get(0).toString()+" / "+matchModel.getPlayers().get(1).toString());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
 
+        matchof.setText( "Partida realizada el "+dateFormat.format(matchModel.getMyDate()));
+        namesView.setText(matchModel.getPlayers().get(0).getName()+" VS "+matchModel.getPlayers().get(1).getName());
 
+        result1View.setText(matchModel.getResultados().get(0).toString());
+        result2View.setText(matchModel.getResultados().get(1).toString());
+
+        /*if(matchModel.getResultados().get(0)>matchModel.getResultados().get(1)) {
+
+            result1View.setTextColor(1223);
+            result2View.setTextColor(4444);
+nose coo poner esto
+
+        }
+        else{}*/
     }
 }
