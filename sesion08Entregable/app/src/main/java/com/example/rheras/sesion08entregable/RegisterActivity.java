@@ -41,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
         EditText editTextImage = (EditText) findViewById(R.id.editTextImage);
         EditText editTextLife = (EditText) findViewById(R.id.editTextlife);
 
+        MatchModel matchModel = new MatchModel();
+        PlayerModel player = new PlayerModel();
 
         values.put("name", editTextName.getText().toString());
         values.put("image", editTextImage.getText().toString());

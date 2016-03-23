@@ -9,73 +9,26 @@ import android.widget.EditText;
 import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "modoparam1";
-    public final static String EXTRA_MESSAGE2 = "modoparam2";
-    public String player1name;
-    public String player2name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    public void normal (View view){
 
-        EditText player1 = (EditText) findViewById(R.id.player1);
+    public void play(View view){
 
-        player1name = player1.getText().toString();
-
-        EditText player2 = (EditText) findViewById(R.id.player2);
-
-        player2name = player2.getText().toString();
-
-        Intent intent = new Intent(this,NormalActivity.class);
-
-
-        Bundle normalBundle = new Bundle();
-
-        normalBundle.putString(EXTRA_MESSAGE,player1name);
-        normalBundle.putString(EXTRA_MESSAGE2,player2name);
-
-        intent.putExtras(normalBundle); // put extras en plurar al pasarle un bundle
-
-        startActivity(intent);
-
-
-
-    }
-
-    public void gigant (View view){
-
-        EditText player1 = (EditText) findViewById(R.id.player1);
-
-        player1name = player1.getText().toString();
-
-        EditText player2 = (EditText) findViewById(R.id.player2);
-
-        player2name = player2.getText().toString();
-
-        Intent intent = new Intent(this,GigantActivity.class);
-
-
-        Bundle gigantBundle = new Bundle();
-
-        gigantBundle.putString(EXTRA_MESSAGE,player1name);
-        gigantBundle.putString(EXTRA_MESSAGE2,player2name);
-
-        intent.putExtras(gigantBundle); // put extras en plurar al pasarle un bundle
-
-        startActivity(intent);
-
-
-
-    }
-
-    public void dataSaves (View view){
-
-        Intent intent = new Intent(this, DataSavesActivity.class);
+        Intent intent = new Intent(this, PlayActivity.class);
 
         startActivity(intent);
 
     }
+
+    public void signup(View view){
+
+
+    }
+
+
 }

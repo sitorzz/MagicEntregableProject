@@ -10,12 +10,13 @@
         android:layout_height="wrap_content"
         android:text="@string/registrarse"
         android:id="@+id/signup"
-        android:onClick="signup"/>
+        android:onClick="registerPlayers"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/jugar"
         android:id="@+id/play"
         android:onClick="play"/>
+
 
 </LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rheras.sesion08entregable.PlayActivity">
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloapp"
+        android:id="@+id/titulo"
+        android:textSize="@dimen/titlesize2"
+        android:padding="@dimen/normalpadding"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player1"
+        android:hint="@string/jugador1"
+        android:paddingBottom="@dimen/titlesize"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player2"
+        android:hint="@string/jugador2"
+        android:paddingBottom="@dimen/titlesize"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pregunta"
+        android:id="@+id/ask"
+        android:padding="@dimen/titlesize"
+        android:textSize="@dimen/titlesize2"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/titlesize">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/normal"
+            android:id="@+id/normal"
+            android:onClick="normal"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/commander"
+            android:id="@+id/commander"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/gigante"
+            android:onClick="gigant"
+            android:id="@+id/gigante"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:text="@string/guardadas"
+        android:id="@+id/datas"
+        android:onClick="dataSaves"
+        />
+
+
+</LinearLayout>
