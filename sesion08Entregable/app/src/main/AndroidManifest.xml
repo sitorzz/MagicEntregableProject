@@ -33,7 +33,9 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".DataSavesDetailActivity"></activity>
+        <activity android:name=".DataSavesDetailActivity"
+            android:parentActivityName=".DataSavesActivity"
+            android:label="@string/detailsofsavedmatch"></activity>
     </application>
 
 </manifest>

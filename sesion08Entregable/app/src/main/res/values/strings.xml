@@ -17,5 +17,7 @@
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
     <string name="register">Registra los jugadores!</string>
+    <string name="matchof">Partida de:</string>
+    <string name="detailsofsavedmatch">Details of a Saved Match</string>
 
 </resources>
