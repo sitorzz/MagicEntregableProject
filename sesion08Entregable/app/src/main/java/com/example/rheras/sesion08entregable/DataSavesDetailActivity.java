@@ -48,7 +48,7 @@ public class DataSavesDetailActivity extends AppCompatActivity {
 
             result1View.setTextColor(1223);
             result2View.setTextColor(4444);
-
+nose coo poner esto
 
         }
         else{}*/
