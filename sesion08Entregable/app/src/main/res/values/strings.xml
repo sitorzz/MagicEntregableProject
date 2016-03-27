@@ -16,10 +16,9 @@
 
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
-<<<<<<< HEAD
-    <string name="register">Registra jugadores!</string>
-=======
+<string name="life">Life</string>
+  <string name="imagen">Selecciona una imagen</string>
     <string name="register">Registra los jugadores!</string>
 
->>>>>>> master
+
 </resources>

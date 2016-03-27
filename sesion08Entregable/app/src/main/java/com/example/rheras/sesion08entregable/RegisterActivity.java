@@ -32,21 +32,22 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     public void registerPlayers(View view) {
+
         playerSQLiteHelper =
                 new PlayerSQLiteHelper(this, "players", null, 1);
         db = playerSQLiteHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         EditText editTextName = (EditText) findViewById(R.id.editTextName);
-        EditText editTextImage = (EditText) findViewById(R.id.editTextImage);
-        EditText editTextLife = (EditText) findViewById(R.id.editTextlife);
+        EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
+
 
         MatchModel matchModel = new MatchModel();
         PlayerModel player = new PlayerModel();
 
         values.put("name", editTextName.getText().toString());
-        values.put("image", editTextImage.getText().toString());
-       values.put("life",editTextLife.getText().toString());
+
+        values.put("life",editTextLife.getText().toString());
 
 
         db.insert("Alumnos", null, values);
@@ -61,6 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         // Start the Intent
         startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
+
+
     }
 
 
