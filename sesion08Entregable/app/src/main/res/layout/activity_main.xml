@@ -5,19 +5,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.rheras.sesion08entregable.MainActivity">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/registrarse"
-        android:id="@+id/signup"
-        android:onClick="signup"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1.9"
         android:text="@string/jugar"
+        android:textSize="@dimen/titlesize3"
         android:id="@+id/play"
-        android:onClick="play"/>
+        android:onClick="play"
+        android:background="@color/primary"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:layout_weight="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appdesarrolladapor"
+        android:id="@+id/textView"
+        android:textSize="@dimen/normalpadding"
+
+        android:background="@color/background"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>

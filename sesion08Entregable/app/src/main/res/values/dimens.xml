@@ -6,4 +6,5 @@
     <dimen name="titlesize2">24dp</dimen>
     <dimen name="normalpadding">16dp</dimen>
     <dimen name="numbers">96dp</dimen>
+    <dimen name="titlesize3">64dp</dimen>
 </resources>
