@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
  */
 public class PlayerSQLiteHelper extends SQLiteOpenHelper {
 
-    String sqlCreate =  "CREATE TABLE players (name TEXT, life INT, image BLOB)";
+    String sqlCreate =  "CREATE TABLE players (name TEXT, life INT, image TEXT)";
     Context context;
     public PlayerSQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -23,7 +23,7 @@ public class PlayerSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        onUpgrade(db,0,1);
+
         db.execSQL(sqlCreate);
     }
 

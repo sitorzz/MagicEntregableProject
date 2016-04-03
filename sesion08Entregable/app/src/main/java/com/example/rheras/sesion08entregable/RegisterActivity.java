@@ -32,8 +32,6 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +39,11 @@ public class RegisterActivity extends AppCompatActivity {
          playerSQLiteHelper=
                 new PlayerSQLiteHelper(this, "players", null, 1);
         db = playerSQLiteHelper.getWritableDatabase();
+
     }
 
 
     public void registerPlayers(View view) {
-
-
 
 
       //   img=Utilities.getBytes(BitmapFactory.decodeResource(getResources(), R.drawable.cute));
@@ -58,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
         String picturePath = "";
 
 
-        File internalStorage = playerSQLiteHelper.context.getDir("PlayerPictures", Context.MODE_PRIVATE);
+        File internalStorage = playerSQLiteHelper.context.getDir("Pictures", Context.MODE_PRIVATE);
         File playerFilePath = new File(internalStorage, editTextName.getText().toString() + ".png");
 
         picturePath = playerFilePath.toString();
@@ -88,17 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-    public void loadImagefromGallery(View view) {
-
-        // Create intent to Open Image applications like Gallery, Google Photos
-
-        Intent galleryIntent = new Intent(Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        // Start the Intent
-        startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
-       // finish();
-
-    }
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
