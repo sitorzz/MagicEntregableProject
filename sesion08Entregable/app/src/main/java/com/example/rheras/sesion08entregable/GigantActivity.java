@@ -190,7 +190,7 @@ public class GigantActivity extends AppCompatActivity {
                         new OutputStreamWriter(
                                 openFileOutput("registronormal.txt", Context.MODE_PRIVATE));
 
-                fout.write("comodin"+"\r\n"+now+"\r\n"+"gigante de 2 cabezas"+"\r\n"+pjname1.getText().toString()+","+"default"+","+lifes1+";"+pjname2.getText().toString()+","+"default"+","+lifes2);
+                fout.write(" "+"\r\n"+now+"\r\n"+"gigante de 2 cabezas"+"\r\n"+pjname1.getText().toString()+","+"default"+","+lifes1+";"+pjname2.getText().toString()+","+"default"+","+lifes2);
 
                 fout.close();
 
