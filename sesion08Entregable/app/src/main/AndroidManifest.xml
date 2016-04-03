@@ -8,6 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/tituloapp"
@@ -33,7 +39,8 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".DataSavesDetailActivity"></activity>
+        <activity android:name=".DataSavesDetailActivity" />
+        <activity android:name=".ListaJugadoresActivity"></activity>
     </application>
 
 </manifest>

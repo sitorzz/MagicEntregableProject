@@ -16,9 +16,12 @@
 
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
-<string name="life">Life</string>
-  <string name="imagen">Selecciona una imagen</string>
+    <string name="life">Life</string>
+    <string name="imagen">Selecciona una imagen</string>
     <string name="register">Registra los jugadores!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
