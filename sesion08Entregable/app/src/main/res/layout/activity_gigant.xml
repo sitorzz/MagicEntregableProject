@@ -1,180 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rheras.sesion08entregable.GigantActivity">
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="player1"
-        android:textAlignment="center"
-        android:id="@+id/gigant1name"
-        android:layout_gravity="center_horizontal"
-        android:textSize="@dimen/titlesize"
-        android:textColor="@color/colorPrimaryDark"
-        android:padding="@dimen/normalpadding"/>
-
+    tools:context="com.example.rheras.sesion08entregable.GigantActivity"
+    android:background="@color/background">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1.5">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 
         <TextView
-            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="30"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="player1"
             android:textAlignment="center"
-            android:id="@+id/gigantplayer1lifes"
+            android:id="@+id/gigant1name"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/numbers"/>
+            android:textSize="@dimen/titlesize"
+            android:textColor="@color/text2"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1.5"
+            android:background="@color/background">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="30"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/gigantplayer1lifes"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/numbers"
+                android:background="@color/background"
+                android:textColor="@color/text2"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:onClick="plus"
-                    android:text="+"
-                    android:id="@+id/plus1" />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:onClick="plus"
-                    android:text="+5"
-                    android:id="@+id/plus15" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:background="@color/background"
+                >
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="-"
-                    android:onClick="minusswitch"
-                    android:id="@+id/minus1" />
-                <Button
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalpadding">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="plus"
+                        android:text="+"
+                        android:id="@+id/plus1"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="plus"
+                        android:text="+5"
+                        android:id="@+id/plus15"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="-5"
-                    android:onClick="minusswitch"
-                    android:id="@+id/minus15" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalpadding">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:onClick="minusswitch"
+                        android:id="@+id/minus1"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-5"
+                        android:onClick="minusswitch"
+                        android:id="@+id/minus15"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                </LinearLayout>
+
             </LinearLayout>
+
+
 
         </LinearLayout>
 
 
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="player2"
-        android:textAlignment="center"
-        android:id="@+id/gigant2name"
-        android:layout_gravity="center_horizontal"
-        android:textSize="@dimen/titlesize"
-        android:textColor="@color/colorPrimaryDark"
-        android:padding="@dimen/normalpadding"/>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1.5"
-        >
         <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="player2"
             android:textAlignment="center"
-            android:id="@+id/gigantplayer2lifes"
+            android:id="@+id/gigant2name"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/numbers"/>
+            android:textSize="@dimen/titlesize"
+            android:textColor="@color/text2"
+           />
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1.5"
             >
-            <LinearLayout
+            <TextView
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="+"
-                    android:onClick="plus"
-                    android:id="@+id/plus2" />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="+5"
-                    android:onClick="plus"
-                    android:id="@+id/plus25" />
-            </LinearLayout>
+                android:text="30"
+                android:textAlignment="center"
+                android:id="@+id/gigantplayer2lifes"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/numbers"
+                android:textColor="@color/text2"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 >
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="-"
-                    android:onClick="minusswitch"
-                    android:id="@+id/minus2" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalpadding"
+                    >
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:onClick="plus"
+                        android:id="@+id/plus2"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="+5"
+                        android:onClick="plus"
+                        android:id="@+id/plus25"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                </LinearLayout>
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="-5"
-                    android:onClick="minusswitch"
-                    android:id="@+id/minus25" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalpadding"
+                    >
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:onClick="minusswitch"
+                        android:id="@+id/minus2"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-5"
+                        android:onClick="minusswitch"
+                        android:id="@+id/minus25"
+                        android:background="@color/primary"
+                        android:textColor="@color/text"/>
+                </LinearLayout>
+
             </LinearLayout>
+
+
 
         </LinearLayout>
 
-
-
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
