@@ -40,16 +40,16 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".RegisterActivity" />
-<<<<<<< HEAD
-        <activity android:name=".DataSavesDetailActivity" />
+
+
         <activity android:name=".ListaJugadoresActivity"></activity>
-=======
+
         <activity
             android:name=".DataSavesDetailActivity"
             android:label="@string/detailsofsavedmatch"
             android:parentActivityName=".DataSavesActivity" />
         <activity android:name=".CommanderActivity"></activity>
->>>>>>> master
+
     </application>
 
 </manifest>
