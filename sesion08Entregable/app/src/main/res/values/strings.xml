@@ -19,5 +19,6 @@
     <string name="register">Registra los jugadores!</string>
     <string name="matchof">Partida de:</string>
     <string name="detailsofsavedmatch">Details of a Saved Match</string>
+    <string name="appdesarrolladapor"><![CDATA[© 2016 Albert&Rubén, Inc. Todos los derechos reservados]]></string>
 
 </resources>

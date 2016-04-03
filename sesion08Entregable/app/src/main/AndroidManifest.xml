@@ -18,27 +18,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".NormalActivity"
             android:label="@string/normal"
             android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".DataSavesActivity"
+            android:theme="@style/AppTheme"
             android:label="@string/partidasguardadas"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GigantActivity"
             android:label="@string/gigante"
+            android:theme="@style/AppTheme"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PlayActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".PlayActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".DataSavesDetailActivity"
             android:label="@string/detailsofsavedmatch"
-            android:parentActivityName=".DataSavesActivity" />
-        <activity android:name=".CommanderActivity"></activity>
+            android:parentActivityName=".DataSavesActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".CommanderActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
