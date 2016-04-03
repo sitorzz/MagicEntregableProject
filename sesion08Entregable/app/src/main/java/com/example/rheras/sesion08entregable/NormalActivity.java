@@ -207,7 +207,7 @@ public class NormalActivity extends AppCompatActivity {
                         new OutputStreamWriter(
                                 openFileOutput("registronormal.txt", Context.MODE_PRIVATE));
 
-                fout.write("comodin"+"\r\n"+now+"\r\n"+"normal"+"\r\n"+pjname1.getText().toString()+","+"default"+","+lifes1+";"+pjname2.getText().toString()+","+"default"+","+lifes2);
+                fout.write(" "+"\r\n"+now+"\r\n"+"normal"+"\r\n"+pjname1.getText().toString()+","+"default"+","+lifes1+";"+pjname2.getText().toString()+","+"default"+","+lifes2);
 
                 fout.close();
 
