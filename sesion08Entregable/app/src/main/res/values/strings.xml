@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sesion08Entregable</string>
+    <string name="app_name">Contador de Vidas Magic</string>
     <string name="jugador1">Jugador 1</string>
     <string name="jugador2">Jugador 2</string>
     <string name="normal">Normal</string>
@@ -7,19 +7,18 @@
     <string name="gigante">Gigante</string>
     <string name="tituloapp">Magic Life Counter</string>
     <string name="pregunta">¿Qué formato vas a jugar?</string>
-    <string name="guardadas">Últimas partidas jugadas</string>
+    <string name="guardadas">Últimas partidas guardadas</string>
     <string name="sinpartidasguardadas">No se encontraron partidas anteriores</string>
-    <string name="partidasguardadas">Last Saved Matches</string>
-
+    <string name="partidasguardadas">Últimas partidas jugadas</string>
     <string name="jugar">Jugar</string>
     <string name="registrarse">Registrar Nuevo Jugador</string>
-
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
     <string name="life">Life</string>
     <string name="imagen">Selecciona una imagen</string>
     <string name="register">Registra los jugadores!</string>
     <string name="matchof">Partida de:</string>
+<<<<<<< HEAD
     <string name="detailsofsavedmatch">Details of a Saved Match</string>
 
     <string name="action_create_new">Crea un nuevo jugador</string>
@@ -28,7 +27,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+=======
+    <string name="detailsofsavedmatch">Detalles de la partida</string>
+>>>>>>> master
     <string name="appdesarrolladapor"><![CDATA[© 2016 Albert&Rubén, Inc. Todos los derechos reservados]]></string>
+    <string name="magiclifecounter">Contador de Vidas Magic</string>
 
 
 </resources>
