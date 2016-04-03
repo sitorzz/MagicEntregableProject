@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 
 public class DataSavesDetailActivity extends AppCompatActivity {
     private MatchModel matchModel;
-    private String prueba;
     private TextView namesView;
     private TextView result1View;
     private TextView result2View;
@@ -44,13 +43,6 @@ public class DataSavesDetailActivity extends AppCompatActivity {
         result1View.setText(matchModel.getResultados().get(0).toString());
         result2View.setText(matchModel.getResultados().get(1).toString());
 
-        /*if(matchModel.getResultados().get(0)>matchModel.getResultados().get(1)) {
 
-            result1View.setTextColor(1223);
-            result2View.setTextColor(4444);
-nose coo poner esto
-
-        }
-        else{}*/
     }
 }

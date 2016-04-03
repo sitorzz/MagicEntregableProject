@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Contador de Vidas Magic</string>
     <string name="jugador1">Jugador 1</string>
     <string name="jugador2">Jugador 2</string>
@@ -14,7 +15,7 @@
     <string name="registrarse">Registrar Nuevo Jugador</string>
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
-    <string name="register">Registra los jugadores!</string>
+    <string name="register">¡Registra los jugadores!</string>
     <string name="matchof">Partida de:</string>
     <string name="detailsofsavedmatch">Detalles de la partida</string>
     <string name="appdesarrolladapor"><![CDATA[© 2016 Albert&Rubén, Inc. Todos los derechos reservados]]></string>
