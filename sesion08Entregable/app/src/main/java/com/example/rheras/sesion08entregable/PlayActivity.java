@@ -32,11 +32,12 @@ public class PlayActivity extends AppCompatActivity {
             case R.id.action_create_new:
                 Intent intentRegister = new Intent(this, RegisterActivity.class);
                 startActivity(intentRegister);
-                break;
-            case R.id.action_menu:
+                return true;
 
-                break;
-        }
+            case R.id.action_menu:
+                return true;
+
+        } return true;
     }
 
 

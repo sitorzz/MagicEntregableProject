@@ -42,20 +42,13 @@
             android:label="@string/gigante"
             android:theme="@style/AppTheme"
             android:parentActivityName=".MainActivity" />
-<<<<<<< HEAD
-        <activity android:name=".PlayActivity" />
-        <activity android:name=".RegisterActivity" />
+
+
 
 
         <activity android:name=".ListaJugadoresActivity"></activity>
 
-        <activity
-            android:name=".DataSavesDetailActivity"
-            android:label="@string/detailsofsavedmatch"
-            android:parentActivityName=".DataSavesActivity" />
-        <activity android:name=".CommanderActivity"></activity>
 
-=======
         <activity android:name=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".RegisterActivity"
