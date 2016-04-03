@@ -15,7 +15,7 @@
             android:required="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash"
             android:label="@string/tituloapp"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".NormalActivity"
             android:label="@string/normal"
