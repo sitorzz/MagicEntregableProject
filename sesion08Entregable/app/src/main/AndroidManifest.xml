@@ -61,7 +61,7 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".CommanderActivity"
             android:theme="@style/AppTheme"></activity>
->>>>>>> master
+
     </application>
 
 </manifest>

@@ -22,8 +22,7 @@ import java.io.FileOutputStream;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    PlayerSQLiteHelper playerSQLiteHelper=
-            new PlayerSQLiteHelper(this, "players", null, 1);
+   PlayerSQLiteHelper playerSQLiteHelper;
     SQLiteDatabase db;
     private static int RESULT_LOAD_IMG = 1;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -39,6 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+         playerSQLiteHelper=
+                new PlayerSQLiteHelper(this, "players", null, 1);
         db = playerSQLiteHelper.getWritableDatabase();
     }
 
