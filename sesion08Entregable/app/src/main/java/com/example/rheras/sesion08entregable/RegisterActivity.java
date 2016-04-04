@@ -54,7 +54,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         String picturePath = "";
 
-
 /*      File internalStorage = playerSQLiteHelper.context.getDir("Pictures", Context.MODE_PRIVATE);
       File playerFilePath = new File(internalStorage, editTextName.getText().toString() + ".png");
 
@@ -69,6 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
        catch (Exception ex) {
            Log.i("DATABASE", "Problem updating picture", ex);
         }
+
 
 */
         values.put("name", editTextName.getText().toString());

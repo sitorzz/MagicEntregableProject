@@ -123,6 +123,7 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
                 return true;
 
             case R.id.action_menu:
+                db.execSQL("DELETE FROM PLAYERS ");
                 return true;
 
         } return true;
