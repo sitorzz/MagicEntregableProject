@@ -45,12 +45,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void registerPlayers(View view) {
 
-
+        db = playerSQLiteHelper.getWritableDatabase();
       //   img=Utilities.getBytes(BitmapFactory.decodeResource(getResources(), R.drawable.cute));
 
         ContentValues values = new ContentValues();
         EditText editTextName = (EditText) findViewById(R.id.editTextName);
-        EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
+
 
         String picturePath = "";
 
@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         values.put("name", editTextName.getText().toString());
 
-        values.put("life",editTextLife.getText().toString());
+        values.put("life",0);
 
       //  values.put("image",picturePath);
 
@@ -111,5 +111,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
+    public void verListaJugadores(View view) {
+        Intent intentListaJugadores = new Intent(this, ListaJugadoresActivity.class);
+        startActivity(intentListaJugadores);
 
+    }
 }

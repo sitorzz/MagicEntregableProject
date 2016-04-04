@@ -32,7 +32,7 @@
             android:label="@string/normal"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme"
-            android:screenOrientation="portrait" />
+            />
         <activity
             android:name=".DataSavesActivity"
             android:theme="@style/AppTheme"
