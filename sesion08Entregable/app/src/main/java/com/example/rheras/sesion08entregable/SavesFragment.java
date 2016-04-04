@@ -50,7 +50,7 @@ public class SavesFragment extends Fragment implements AdapterView.OnItemClickLi
 
 
         lastmatches = (ListView) getActivity().findViewById(R.id.datasaves);
-        DataSavesActivity.loadMatches();
+       loadMatches();
         createDataModel();
 
 
