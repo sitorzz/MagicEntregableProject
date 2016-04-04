@@ -22,12 +22,12 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
         public final static String EXTRA_MESSAGE2 = "modoparam2";
         public static String player1name;
         public static String player2name;
-   public  PlayerSQLiteHelper playerSQLiteHelper;
-   SQLiteDatabase db;
-   public static ArrayList<PlayerModel> jugadores2 = new ArrayList<>();
-  public static  ArrayList<PlayerModel> jugadores = new ArrayList<>();
-    public static String nombrejugador;
-  public static  ArrayList<String>jugadoresNames = new ArrayList<>();
+        public  PlayerSQLiteHelper playerSQLiteHelper;
+        SQLiteDatabase db;
+        public static ArrayList<PlayerModel> jugadores2 = new ArrayList<>();
+        public static  ArrayList<PlayerModel> jugadores = new ArrayList<>();
+        public static String nombrejugador;
+        public static  ArrayList<String>jugadoresNames = new ArrayList<>();
 
    public static ListView listView;
 
@@ -123,7 +123,6 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
                 return true;
 
             case R.id.action_menu:
-
                 db.execSQL("DELETE FROM PLAYERS ");
                 this.finish();
                 return true;
