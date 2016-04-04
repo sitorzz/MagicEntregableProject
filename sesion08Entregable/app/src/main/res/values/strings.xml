@@ -14,28 +14,18 @@
     <string name="jugar">Jugar</string>
     <string name="registrarse">Registrar Nuevo Jugador</string>
     <string name="codigo">Codigo jugador</string>
-    <string name="nombre">Nombre jugador</string>
-<<<<<<< HEAD
+    <string name="nombre">Nombre nuevo jugador</string>
     <string name="life">Life</string>
     <string name="imagen">Selecciona una imagen</string>
-    <string name="register">Registra los jugadores!</string>
-=======
     <string name="register">¡Registra los jugadores!</string>
->>>>>>> master
     <string name="matchof">Partida de:</string>
-
-    
     <string name="action_create_new">Crea un nuevo jugador</string>
     <string name="action_menu">Menu</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
-
     <string name="detailsofsavedmatch">Detalles de la partida</string>
-
     <string name="appdesarrolladapor"><![CDATA[© 2016 Albert&Rubén, Inc. Todos los derechos reservados]]></string>
     <string name="magiclifecounter">Contador de Vidas Magic</string>
+    <string name="registrarjugador">Registra un nuevo jugador</string>
 
 
 </resources>
