@@ -6,8 +6,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/splash_image"
+        android:src="@mipmap/magic_logo"
         android:id="@+id/imageView"
-        android:background="@color/text2"/>
+        android:background="@color/primary"/>
 
 </LinearLayout>

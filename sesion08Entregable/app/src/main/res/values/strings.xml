@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Contador de Vidas Magic</string>
     <string name="jugador1">Jugador 1</string>
     <string name="jugador2">Jugador 2</string>
@@ -14,9 +15,13 @@
     <string name="registrarse">Registrar Nuevo Jugador</string>
     <string name="codigo">Codigo jugador</string>
     <string name="nombre">Nombre jugador</string>
+<<<<<<< HEAD
     <string name="life">Life</string>
     <string name="imagen">Selecciona una imagen</string>
     <string name="register">Registra los jugadores!</string>
+=======
+    <string name="register">¡Registra los jugadores!</string>
+>>>>>>> master
     <string name="matchof">Partida de:</string>
 
     

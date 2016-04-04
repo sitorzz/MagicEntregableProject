@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Magic Life Counter</string>
+    <string name="jugador1">Player 1</string>
+    <string name="jugador2">Player 2</string>
+    <string name="normal">Normal</string>
+    <string name="commander">EDH</string>
+    <string name="gigante">Gigant</string>
+    <string name="tituloapp">Magic Life Counter</string>
+    <string name="pregunta">What format you want to play?</string>
+    <string name="guardadas">Latest savegames</string>
+    <string name="sinpartidasguardadas">No previous matches found</string>
+    <string name="partidasguardadas">Latest savegames</string>
+    <string name="jugar">Play</string>
+    <string name="registrarse">Register New Player</string>
+    <string name="codigo">Player Code</string>
+    <string name="nombre">Player Name</string>
+    <string name="register">Register players!</string>
+    <string name="matchof">Match of:</string>
+    <string name="detailsofsavedmatch">Match details</string>
+    <string name="appdesarrolladapor"><![CDATA[© 2016 Albert&Rubén, Inc. All rights reserved]]></string>
+    <string name="magiclifecounter">Magic Life Counter</string>
+</resources>
