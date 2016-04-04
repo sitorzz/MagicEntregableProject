@@ -54,23 +54,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         String picturePath = "";
 
-
-<<<<<<< HEAD
-      // File internalStorage = playerSQLiteHelper.context.getDir("Pictures", Context.MODE_PRIVATE);
-      //File playerFilePath = new File(internalStorage, editTextName.getText().toString() + ".png");
-
-      // picturePath = playerFilePath.toString();
-
-        //FileOutputStream fos = null;
-        //try {
-      //     fos = new FileOutputStream(playerFilePath);
-         //   imageBitmap.compress(Bitmap.CompressFormat.PNG, 100 /*quality*/, fos);
-        //   fos.close();
-        // }
-       //catch (Exception ex) {
-      //     Log.i("DATABASE", "Problem updating picture", ex);
-        //}
-=======
 /*      File internalStorage = playerSQLiteHelper.context.getDir("Pictures", Context.MODE_PRIVATE);
       File playerFilePath = new File(internalStorage, editTextName.getText().toString() + ".png");
 
@@ -85,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
        catch (Exception ex) {
            Log.i("DATABASE", "Problem updating picture", ex);
         }
->>>>>>> master
+
 
 */
         values.put("name", editTextName.getText().toString());
