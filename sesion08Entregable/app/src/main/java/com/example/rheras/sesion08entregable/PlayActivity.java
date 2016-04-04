@@ -70,6 +70,7 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
             listView.setOnItemClickListener(this);
+
         }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -118,6 +119,7 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.action_create_new:
                 Intent intentRegister = new Intent(this, RegisterActivity.class);
                 startActivity(intentRegister);
+                this.finish();
                 return true;
 
             case R.id.action_menu:

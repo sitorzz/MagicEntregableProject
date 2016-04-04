@@ -8,10 +8,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.rheras.sesion08entregable.RegisterActivity">
+    tools:context="com.example.rheras.sesion08entregable.RegisterActivity"
+    android:background="@color/background"
+    >
 
 
-    <LinearLayout
+   <!-- <LinearLayout
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,43 +25,53 @@
             android:onClick="dispatchTakePictureIntent"/>
 
 
-    </LinearLayout>
+    </LinearLayout>-->
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registrarjugador"
+        android:textAlignment="center"
+        android:textSize="@dimen/titlesize2"
+        android:padding="@dimen/normalpadding"
+        android:textColor="@color/text2"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nombre"/>
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="6"
-            android:id="@+id/editTextName"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:id="@+id/editTextName"
+            android:hint="@string/nombre"
+            android:textAlignment="center"
+            android:padding="@dimen/normalpadding"/>
 
         <Button
-            android:layout_width="wrap_content"
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register"
-            android:onClick="registerPlayers"/>
+            android:onClick="registerPlayers"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:background="@color/primary"/>
+
 
     </LinearLayout>
 
-    <LinearLayout
+
+
+
+
+
+  <!--  <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -81,8 +93,9 @@
             android:text="@string/register"
             android:onClick="verListaJugadores"/>
 
-    </LinearLayout>
+   */ </LinearLayout>
 
+-->
 
 
 </LinearLayout>
