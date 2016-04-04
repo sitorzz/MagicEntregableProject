@@ -204,4 +204,9 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(intent);
 
         }
+
+    public void edh(View view) {
+
+        Toast.makeText(this, "Modo en desarrollo", Toast.LENGTH_SHORT).show();
+    }
 }
