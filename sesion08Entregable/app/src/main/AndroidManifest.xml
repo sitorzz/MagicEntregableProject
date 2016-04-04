@@ -30,19 +30,19 @@
         <activity
             android:name=".NormalActivity"
             android:label="@string/normal"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".PlayActivity"
             android:theme="@style/AppTheme"
             />
         <activity
             android:name=".DataSavesActivity"
             android:theme="@style/AppTheme"
             android:label="@string/partidasguardadas"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".PlayActivity" />
         <activity
             android:name=".GigantActivity"
             android:label="@string/gigante"
             android:theme="@style/AppTheme"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".PlayActivity" />
 
 
 
@@ -53,6 +53,7 @@
         <activity android:name=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".RegisterActivity"
+            android:parentActivityName=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".DataSavesDetailActivity"
