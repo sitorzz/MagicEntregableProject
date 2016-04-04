@@ -8,6 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true" />
+
         <activity
             android:name=".Splash"
             android:label="@string/tituloapp"
@@ -24,22 +30,30 @@
         <activity
             android:name=".NormalActivity"
             android:label="@string/normal"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".PlayActivity"
             android:theme="@style/AppTheme"
-            android:screenOrientation="portrait" />
+            />
         <activity
             android:name=".DataSavesActivity"
             android:theme="@style/AppTheme"
             android:label="@string/partidasguardadas"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".PlayActivity" />
         <activity
             android:name=".GigantActivity"
             android:label="@string/gigante"
             android:theme="@style/AppTheme"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".PlayActivity" />
+
+
+
+
+        <activity android:name=".ListaJugadoresActivity"></activity>
+
+
         <activity android:name=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".RegisterActivity"
+            android:parentActivityName=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".DataSavesDetailActivity"
@@ -48,6 +62,7 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".CommanderActivity"
             android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

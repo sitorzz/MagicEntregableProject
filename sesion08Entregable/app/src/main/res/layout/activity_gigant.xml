@@ -13,6 +13,7 @@
 
 
         <TextView
+            android:paddingTop="@dimen/extrapadding"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
                         android:onClick="plus"
                         android:text="+"
                         android:id="@+id/plus1"
-                        android:background="@color/primary"
+                        android:background="@color/primarylight"
                         android:textColor="@color/text"/>
                     <Button
                         android:layout_width="match_parent"
@@ -90,7 +91,7 @@
                         android:text="-"
                         android:onClick="minusswitch"
                         android:id="@+id/minus1"
-                        android:background="@color/primary"
+                        android:background="@color/primarylight"
                         android:textColor="@color/text"/>
                     <Button
                         android:layout_width="match_parent"
@@ -161,7 +162,7 @@
                         android:text="+"
                         android:onClick="plus"
                         android:id="@+id/plus2"
-                        android:background="@color/primary"
+                        android:background="@color/primarylight"
                         android:textColor="@color/text"/>
                     <Button
                         android:layout_width="match_parent"
@@ -188,7 +189,7 @@
                         android:text="-"
                         android:onClick="minusswitch"
                         android:id="@+id/minus2"
-                        android:background="@color/primary"
+                        android:background="@color/primarylight"
                         android:textColor="@color/text"
                         />
 
