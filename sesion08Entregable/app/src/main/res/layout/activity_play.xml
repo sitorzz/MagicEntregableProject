@@ -90,6 +90,7 @@
                     android:id="@+id/commander"
                     android:textColor="@color/text"
                     android:background="@color/primary"
+                    android:onClick="edh"
                     />
 
                 <Button

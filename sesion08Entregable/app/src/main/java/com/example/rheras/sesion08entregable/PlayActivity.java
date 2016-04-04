@@ -20,16 +20,16 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
         public final static String EXTRA_MESSAGE = "modoparam1";
         public final static String EXTRA_MESSAGE2 = "modoparam2";
-        public String player1name;
-        public String player2name;
-    PlayerSQLiteHelper playerSQLiteHelper;
-    SQLiteDatabase db;
-    ArrayList<PlayerModel> jugadores2 = new ArrayList<>();
-    ArrayList<PlayerModel> jugadores = new ArrayList<>();
-    String nombrejugador;
-    ArrayList<String>jugadoresNames = new ArrayList<>();
+        public static String player1name;
+        public static String player2name;
+   public  PlayerSQLiteHelper playerSQLiteHelper;
+   SQLiteDatabase db;
+   public static ArrayList<PlayerModel> jugadores2 = new ArrayList<>();
+  public static  ArrayList<PlayerModel> jugadores = new ArrayList<>();
+    public static String nombrejugador;
+  public static  ArrayList<String>jugadoresNames = new ArrayList<>();
 
-    ListView listView;
+   public static ListView listView;
 
 
         @Override
@@ -123,7 +123,9 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
                 return true;
 
             case R.id.action_menu:
+
                 db.execSQL("DELETE FROM PLAYERS ");
+                this.finish();
                 return true;
 
         } return true;
@@ -135,13 +137,13 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
             if(jugadores2.size()>2){
 
-                Toast.makeText(this, "Máximo 2 jugadores!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "¡Máximo 2 jugadores!", Toast.LENGTH_SHORT).show();
 
                 }
 
             else if(jugadores2.size()<2){
 
-                Toast.makeText(this, "Mínimo 2 jugadores!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "¡Mínimo 2 jugadores!", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -204,4 +206,9 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(intent);
 
         }
+
+    public void edh(View view) {
+
+        Toast.makeText(this, "Modo en desarrollo", Toast.LENGTH_SHORT).show();
+    }
 }
