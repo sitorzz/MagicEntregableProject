@@ -125,6 +125,7 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.action_menu:
 
                 db.execSQL("DELETE FROM PLAYERS ");
+                this.finish();
                 return true;
 
         } return true;
@@ -136,13 +137,13 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
             if(jugadores2.size()>2){
 
-                Toast.makeText(this, "Máximo 2 jugadores!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "¡Máximo 2 jugadores!", Toast.LENGTH_SHORT).show();
 
                 }
 
             else if(jugadores2.size()<2){
 
-                Toast.makeText(this, "Mínimo 2 jugadores!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "¡Mínimo 2 jugadores!", Toast.LENGTH_SHORT).show();
                 }
 
 

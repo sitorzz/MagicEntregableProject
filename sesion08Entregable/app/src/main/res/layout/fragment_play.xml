@@ -98,7 +98,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/gigante"
-                android:onClick="gigantf"
+                android:onClick="gigant"
                 android:id="@+id/gigante"
                 android:textColor="@color/text"
                 android:background="@color/primary"
