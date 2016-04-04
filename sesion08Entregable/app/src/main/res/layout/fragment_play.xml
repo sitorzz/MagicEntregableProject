@@ -1,8 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rheras.sesion08entregable.PlayFragment">
+    android:orientation="vertical"
+    tools:context="com.example.rheras.sesion08entregable.PlayFragment"
+    android:background="@color/background">
 
     <TextView
         android:textAlignment="center"
@@ -87,6 +90,7 @@
                 android:id="@+id/commander"
                 android:textColor="@color/text"
                 android:background="@color/primary"
+                android:onClick="edh"
                 />
 
             <Button
@@ -94,7 +98,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/gigante"
-                android:onClick="gigant"
+                android:onClick="gigantf"
                 android:id="@+id/gigante"
                 android:textColor="@color/text"
                 android:background="@color/primary"
@@ -102,18 +106,12 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_weight="0.5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/guardadas"
-            android:id="@+id/datas"
-            android:onClick="dataSaves"
-            android:textColor="@color/text"
-            android:background="@color/primary"
-            />
+
 
     </LinearLayout>
+
+
+
 
 
 </LinearLayout>

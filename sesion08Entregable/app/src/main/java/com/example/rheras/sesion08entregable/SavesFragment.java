@@ -2,6 +2,7 @@ package com.example.rheras.sesion08entregable;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +23,7 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SavesFragment extends Fragment {
+public class SavesFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private ListView lastmatches;
     private MatchModel matchModel;
@@ -33,7 +34,7 @@ public class SavesFragment extends Fragment {
     private ArrayList<MatchModel> matchModels;
     private ArrayList<Map<String, String>> data;
     public final static String EXTRA_MESSAGE_DETAIL = "detaildata";
-
+   public static SimpleAdapter adapter;
 
 
     public SavesFragment() {
@@ -41,20 +42,38 @@ public class SavesFragment extends Fragment {
     }
 
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saves, container, false);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        loadMatches();
+
+
+        lastmatches = (ListView) getActivity().findViewById(R.id.datasaves);
+        DataSavesActivity.loadMatches();
         createDataModel();
-        SimpleAdapter adapter;
 
-        adapter = new SimpleAdapter(this, data, android.R.layout.simple_list_item_2,new String[]{"title","subtitle"},new int[]{android.R.id.text1,android.R.id.text2});
+
+
+        adapter = new SimpleAdapter(getActivity(), data, android.R.layout.simple_list_item_2,new String[]{"title","subtitle"},new int[]{android.R.id.text1,android.R.id.text2});
 
         lastmatches.setAdapter(adapter);
         lastmatches.setOnItemClickListener(this);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_saves, container, false);
+
+
+
+
+
+
 
     }
 
@@ -70,7 +89,7 @@ public class SavesFragment extends Fragment {
             BufferedReader fin =
                     new BufferedReader(
                             new InputStreamReader(
-                                    openFileInput("registronormal.txt")));
+                                    getActivity().openFileInput("registronormal.txt")));
 
             String aux = "";
 
@@ -162,6 +181,12 @@ public class SavesFragment extends Fragment {
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intenttodetail = new Intent(getActivity(), DataSavesDetailActivity.class);
 
+        intenttodetail.putExtra(EXTRA_MESSAGE_DETAIL,matchModels.get(position));
 
+        startActivity(intenttodetail);
+    }
 }
