@@ -60,7 +60,8 @@
             android:parentActivityName=".DataSavesActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".CommanderActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".PlayActivity"></activity>
 
     </application>
 

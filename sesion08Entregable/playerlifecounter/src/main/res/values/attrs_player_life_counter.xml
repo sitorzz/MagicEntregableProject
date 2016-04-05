@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="PlayerLifeCounter">
+        <attr name="playerName" format="string" />
+        <attr name="totalLifes" format="string" />
+    </declare-styleable>
+</resources>

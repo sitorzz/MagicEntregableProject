@@ -21,7 +21,6 @@
             android:text="player1"
             android:textAlignment="center"
             android:id="@+id/normal1name"
-            android:layout_gravity="center_horizontal"
             android:textSize="@dimen/titlesize"
             android:textColor="@color/text2"
             android:background="@color/background"
