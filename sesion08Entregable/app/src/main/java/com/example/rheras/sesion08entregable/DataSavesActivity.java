@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DataSavesActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class DataSavesActivity extends AppCompatActivity{
 
     private ListView lastmatches;
     private MatchModel matchModel;
@@ -36,132 +36,9 @@ public class DataSavesActivity extends AppCompatActivity implements AdapterView.
         setContentView(R.layout.activity_data_saves);
 
 
-        lastmatches = (ListView) findViewById(R.id.datasaves);
-
-
-        loadMatches();
-        createDataModel();
-        SimpleAdapter adapter;
-
-        adapter = new SimpleAdapter(this, data, android.R.layout.simple_list_item_2,new String[]{"title","subtitle"},new int[]{android.R.id.text1,android.R.id.text2});
-
-        lastmatches.setAdapter(adapter);
-        lastmatches.setOnItemClickListener(this);
-
 
 
     }
 
-    public void loadMatches() {
 
-        matchModels = new ArrayList<>();
-
-
-        auxint = 0;
-
-        try {
-
-            BufferedReader fin =
-                    new BufferedReader(
-                            new InputStreamReader(
-                                    openFileInput("registronormal.txt")));
-
-            String aux = "";
-
-            String str = fin.readLine();
-
-
-            while (str != null) {
-
-                aux = fin.readLine();
-                jugadores = new ArrayList<>();
-
-                if (auxint % 3 == 0) {
-
-                    matchModel = new MatchModel();
-
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                    matchModel.setMyDate(dateFormat.parse(aux));
-
-                } else if (auxint % 3 == 1) {
-
-                    matchModel.setModo(aux);
-
-                } else if (auxint % 3 == 2) {
-
-                    jugadores = new ArrayList<>();
-                    lifes = new ArrayList<>();
-                    String[] separated = aux.split(";");
-
-                    for (int i = 0; i < separated.length; i++) {
-
-                        String jugador1 = separated[i];
-
-                        String[] param = jugador1.split(",");
-
-                        //rellena 1 jugador
-
-                        playerModel = new PlayerModel();
-
-
-                        for (int j = 0; j < param.length; j++) {
-
-                            if (j == 0) {
-                                playerModel.setName(param[j]);
-                            } else if (j == 1) {
-                                playerModel.setAvatar(param[j]);
-                            } else if (j == 2) {
-                                playerModel.setLife(Integer.parseInt(param[j]));
-                                lifes.add(Integer.parseInt(param[j]));
-                            }
-                        }
-
-                        jugadores.add(playerModel);
-
-
-                    }
-                    matchModel.setResultados(lifes);
-                    matchModel.setPlayers(jugadores);
-
-                    matchModels.add(matchModel);
-                }
-                auxint++;
-            }
-
-
-            fin.close();
-
-
-        } catch (Exception ex) {
-            Log.e("Ficheros", "Error al leer fichero desde memoria interna");
-        }
-
-
-    }
-
-    private void createDataModel() {
-
-        data = new ArrayList<Map<String, String>>();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-        for (int i = 0; i < matchModels.size(); i++) {
-        Map<String,String> datum = new HashMap<String,String>(2);
-
-            datum.put("title",matchModels.get(i).getPlayers().get(0).getName()+" VS "+matchModels.get(i).getPlayers().get(1).getName());
-
-            datum.put("subtitle",dateFormat.format(matchModels.get(i).getMyDate()));
-
-        data.add(datum);
-        }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        Intent intenttodetail = new Intent(this, DataSavesDetailActivity.class);
-
-        intenttodetail.putExtra(EXTRA_MESSAGE_DETAIL,matchModels.get(position));
-
-        startActivity(intenttodetail);
-    }
 }

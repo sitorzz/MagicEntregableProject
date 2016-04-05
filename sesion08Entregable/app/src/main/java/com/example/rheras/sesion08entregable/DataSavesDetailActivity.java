@@ -20,7 +20,7 @@ public class DataSavesDetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        matchModel = (MatchModel) intent.getExtras().getSerializable(DataSavesActivity.EXTRA_MESSAGE_DETAIL);
+        matchModel = (MatchModel) intent.getExtras().getSerializable(SavesFragment.EXTRA_MESSAGE_DETAIL);
 
         namesView = (TextView) findViewById(R.id.names);
         result1View = (TextView) findViewById(R.id.result1);
