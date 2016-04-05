@@ -52,13 +52,16 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             if (c.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
 
-                for (int j = 0; c.moveToNext(); j++) {
+                for (int j = 0; j<c.getCount(); j++) {
+
 
                     nombrejugador = c.getString(0);
 
                     PlayerModel player = new PlayerModel(nombrejugador, "", 0);
 
                     jugadores.add(player);
+
+                    c.moveToNext();
                 }
             }
 
