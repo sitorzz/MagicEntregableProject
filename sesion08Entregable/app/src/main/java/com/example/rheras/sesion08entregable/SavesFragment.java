@@ -48,9 +48,8 @@ public class SavesFragment extends Fragment implements AdapterView.OnItemClickLi
         super.onActivityCreated(savedInstanceState);
 
 
-
         lastmatches = (ListView) getActivity().findViewById(R.id.datasaves);
-       loadMatches();
+        loadMatches();
         createDataModel();
 
 
