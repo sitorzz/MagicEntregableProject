@@ -23,7 +23,7 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
         public static String player1name;
         public static String player2name;
         public  PlayerSQLiteHelper playerSQLiteHelper;
-        SQLiteDatabase db;
+        public  SQLiteDatabase db;
         public static ArrayList<PlayerModel> jugadores2;
         public static  ArrayList<PlayerModel> jugadores;
         public static String nombrejugador;
@@ -211,6 +211,45 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         }
 
+        public void edh(View view) {
+
+
+
+          if(jugadores2.size()<2){
+
+                Toast.makeText(this, "¡Mínimo 2 jugadores!", Toast.LENGTH_SHORT).show();
+            }
+
+
+            else{
+
+                jugadoresNames = new ArrayList<>();
+
+                for(int i=0;i<jugadores2.size();i++)
+                {
+                    jugadoresNames.add(jugadores2.get(i).getName());
+                }
+
+
+
+                Intent intent = new Intent(this,CommanderActivity.class);
+
+
+                Bundle commanderActivity = new Bundle();
+
+
+                commanderActivity.putStringArrayList(EXTRA_MESSAGE,jugadoresNames);
+
+
+                intent.putExtras(commanderActivity); // put extras en plurar al pasarle un bundle
+
+                startActivity(intent);
+
+
+
+            }
+        }
+
         public void dataSaves (View view){
 
             Intent intent = new Intent(this, DataSavesActivity.class);
@@ -219,8 +258,5 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
         }
 
-    public void edh(View view) {
 
-        Toast.makeText(this, "Modo en desarrollo", Toast.LENGTH_SHORT).show();
-    }
 }
