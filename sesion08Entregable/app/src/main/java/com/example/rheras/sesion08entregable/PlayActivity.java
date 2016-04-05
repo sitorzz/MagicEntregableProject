@@ -22,12 +22,12 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
         public final static String EXTRA_MESSAGE2 = "modoparam2";
         public static String player1name;
         public static String player2name;
-   public  PlayerSQLiteHelper playerSQLiteHelper;
-   SQLiteDatabase db;
-   public static ArrayList<PlayerModel> jugadores2 = new ArrayList<>();
-  public static  ArrayList<PlayerModel> jugadores = new ArrayList<>();
-    public static String nombrejugador;
-  public static  ArrayList<String>jugadoresNames = new ArrayList<>();
+        public  PlayerSQLiteHelper playerSQLiteHelper;
+        SQLiteDatabase db;
+        public static ArrayList<PlayerModel> jugadores2;
+        public static  ArrayList<PlayerModel> jugadores;
+        public static String nombrejugador;
+        public static  ArrayList<String>jugadoresNames;
 
    public static ListView listView;
 
@@ -38,6 +38,9 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
             setContentView(R.layout.activity_play);
 
+            jugadores2 = new ArrayList<>();
+            jugadores = new ArrayList<>();
+            jugadoresNames = new ArrayList<>();
             playerSQLiteHelper =
                     new PlayerSQLiteHelper(this, "players", null, 1);
             db = playerSQLiteHelper.getWritableDatabase();
@@ -49,8 +52,10 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
             if (c.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
 
-                for (int i = 0; c.moveToNext(); i++) {
+                for (int j = 0; c.moveToNext(); j++) {
+
                     nombrejugador = c.getString(0);
+
                     PlayerModel player = new PlayerModel(nombrejugador, "", 0);
 
                     jugadores.add(player);
@@ -62,7 +67,12 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
 
             //Creamos un ArrayAdapter usando nuestro array de jugadores
 
-            for (int i=0;i<jugadores.size();i++){jugadoresNames.add(jugadores.get(i).getName().toString());}
+            for (int i=0;i<jugadores.size();i++){
+
+                jugadoresNames.add(jugadores.get(i).getName().toString());
+
+
+            }
 
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_checked, jugadoresNames);
             //Aplicamos el ArrayAdapter a la listView
@@ -123,7 +133,6 @@ public class PlayActivity extends AppCompatActivity implements AdapterView.OnIte
                 return true;
 
             case R.id.action_menu:
-
                 db.execSQL("DELETE FROM PLAYERS ");
                 this.finish();
                 return true;

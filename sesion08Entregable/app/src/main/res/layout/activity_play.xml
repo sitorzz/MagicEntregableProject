@@ -61,6 +61,7 @@
                 android:text="@string/pregunta"
                 android:id="@+id/ask"
                 android:textSize="@dimen/titlesize2"
+                android:paddingBottom="@dimen/normalpadding"
                 android:textColor="@color/text2"
                 android:layout_gravity="center_horizontal" />
 
