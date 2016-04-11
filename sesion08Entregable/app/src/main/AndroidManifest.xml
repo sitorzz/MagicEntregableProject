@@ -34,11 +34,6 @@
             android:theme="@style/AppTheme"
             />
         <activity
-            android:name=".DataSavesActivity"
-            android:theme="@style/AppTheme"
-            android:label="@string/partidasguardadas"
-            android:parentActivityName=".PlayActivity" />
-        <activity
             android:name=".GigantActivity"
             android:label="@string/gigante"
             android:theme="@style/AppTheme"
@@ -53,6 +48,10 @@
         <activity android:name=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".RegisterActivity"
+            android:parentActivityName=".PlayActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".DataSavesActivity"
             android:parentActivityName=".PlayActivity"
             android:theme="@style/AppTheme"/>
         <activity

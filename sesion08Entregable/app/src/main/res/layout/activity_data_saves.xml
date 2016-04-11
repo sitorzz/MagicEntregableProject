@@ -3,16 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rheras.sesion08entregable.DataSavesActivity"
-    >
+    tools:context="com.example.rheras.sesion08entregable.SavesFragment">
 
-    <ListView
+    <fragment
+        android:name="com.example.rheras.sesion08entregable.SavesFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/datasaves"
-        android:divider="@color/primary"
-        android:dividerHeight="2dp"
-        android:background="@color/background">
+        android:id="@+id/savesFragment">
+    </fragment>
 
-    </ListView>
 </LinearLayout>
